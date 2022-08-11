@@ -1,6 +1,12 @@
 import * as Dialog from '@radix-ui/react-dialog'
 import { ArrowCircleDown, ArrowCircleUp, X } from 'phosphor-react'
-import { Content, Overlay, CloseButton, TransactionType, TransactionTypeButton } from './styles'
+import {
+  Content,
+  Overlay,
+  CloseButton,
+  TransactionType,
+  TransactionTypeButton,
+} from './styles'
 import * as z from 'zod'
 import { Controller, useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -11,7 +17,7 @@ const newTransactionFormSchema = z.object({
   description: z.string(),
   price: z.number(),
   category: z.string(),
-  type: z.enum(['income', 'outcome'])
+  type: z.enum(['income', 'outcome']),
 })
 
 type newTransactionFormInputs = z.infer<typeof newTransactionFormSchema>
@@ -24,9 +30,9 @@ export function NewTransactionModal() {
     register,
     handleSubmit,
     formState: { isSubmitting },
-    reset
+    reset,
   } = useForm<newTransactionFormInputs>({
-    resolver: zodResolver(newTransactionFormSchema)
+    resolver: zodResolver(newTransactionFormSchema),
   })
 
   async function handleCreateNewTransaction(data: newTransactionFormInputs) {
@@ -76,8 +82,8 @@ export function NewTransactionModal() {
             render={({ field }) => {
               return (
                 <TransactionType
-                  onValueChange={ field.onChange }
-                  value={ field.value }
+                  onValueChange={field.onChange}
+                  value={field.value}
                 >
                   <TransactionTypeButton variant="income" value="income">
                     <ArrowCircleUp size={24} />
@@ -92,7 +98,7 @@ export function NewTransactionModal() {
             }}
           />
 
-          <button type="submit" disabled={ isSubmitting }>
+          <button type="submit" disabled={isSubmitting}>
             Cadastrar
           </button>
         </form>
