@@ -23,6 +23,22 @@
       "category": "Assinatura",
       "price": 60,
       "createdAt": "2022-08-10T22:50:34.470Z"
+    },
+    {
+      "description": "Desenvolvimento de app",
+      "price": 10000,
+      "category": "Venda",
+      "type": "income",
+      "createdAt": "2022-08-11T12:22:13.603Z",
+      "id": 4
+    },
+    {
+      "description": "Pizza",
+      "price": 70,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2022-08-11T13:57:23.521Z",
+      "id": 5
     }
   ]
 }
