@@ -15,6 +15,14 @@
       "category": "Alimentação",
       "price": 50,
       "createdAt": "2022-08-10T22:50:34.470Z"
+    },
+    {
+      "id": 3,
+      "description": "PSN Plus Deluxe",
+      "type": "outcome",
+      "category": "Assinatura",
+      "price": 60,
+      "createdAt": "2022-08-10T22:50:34.470Z"
     }
   ]
 }
